@@ -67,10 +67,16 @@ export class OrdersComponent implements OnInit {
     this.timeline.zoomOut(1)
   }
   moveLeftFunc(){
-    //this.timeline.moveTo()
+    var currentTime = new Date()
+    currentTime = this.timeline.getWindow().start
+    currentTime.setDate(currentTime.getDate()-0.2)
+    this.timeline.moveTo(currentTime)
   }
   moveRightFunc(){
-    //this.timeline.moveTo(Date.now()+2)
+    var currentTime = new Date()
+    currentTime = this.timeline.getWindow().end
+    currentTime.setDate(currentTime.getDate()+0.2)
+    this.timeline.moveTo(currentTime)
   }
 
   

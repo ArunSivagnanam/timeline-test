@@ -195,7 +195,7 @@ export class AppComponent implements OnInit  {
       
         //let destination = airports[Math.floor(Math.random() * airports.length)];
         this.data.update(data.sortedDocuments.getArray())
-        console.log(this.data.get())
+        //console.log(this.data.get())
         
     });
          

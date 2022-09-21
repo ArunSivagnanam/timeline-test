@@ -87,7 +87,7 @@ export class OrdersComponent implements OnInit {
     this.data.add(
       [
        {
-        id:1,
+        id:2,
         start: start,
         end:end,
         group: 1,
@@ -95,7 +95,7 @@ export class OrdersComponent implements OnInit {
         className:'darkblue'
         },
       {
-        id:2,
+        id:1,
         start: start1,
         end:end1,
         group: 1,
@@ -110,7 +110,8 @@ export class OrdersComponent implements OnInit {
 
   getOptions(){
     this.options = {
-      orientation: 'top'
+      orientation: 'top',
+      editable:true
     }
     
   }

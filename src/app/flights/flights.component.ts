@@ -72,6 +72,20 @@ export class FlightsComponent implements OnInit  {
     this.timeline.setItems(this.data); 
   }
 
+  zoomInFunc(){
+    this.timeline.zoomIn(1)
+  }
+
+  zoomOutFunc(){
+    this.timeline.zoomOut(1)
+  }
+  moveLeftFunc(){
+    //this.timeline.moveTo()
+  }
+  moveRightFunc(){
+    //this.timeline.moveTo(Date.now()+2)
+  }
+
   getTimelineGroups() {
      // create groups
     this.groups = new DataSet([

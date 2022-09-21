@@ -1,8 +1,8 @@
 <h1>CPH flight departures</h1>
 <div class="menu">
-    <input type="button" id="zoomIn" value="Zoom in" />
-    <input type="button" id="zoomOut" value="Zoom out" />
-    <input type="button" id="moveLeft" value="Move left" />
-    <input type="button" id="moveRight" value="Move right" />
-  </div>
+  <button (click)="zoomInFunc()" >Zoom In</button>
+  <button (click)="zoomOutFunc()" >Zoom Out</button>
+  <button (click)="moveLeftFunc()" >Move Left</button>
+  <button (click)="moveRightFunc()" >Move Right</button>
+</div>
 <div #timeline></div>

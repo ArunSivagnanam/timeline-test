@@ -42,13 +42,13 @@ export interface AggregatedDocuments {
 
 @Component({
   selector: 'my-app',
-  templateUrl: './app.component.html',
-  styleUrls: [ './app.component.scss' ]
+  templateUrl: './flights.component.html',
+  styleUrls: [ './flights.component.scss' ],
 })
 
 
 
-export class AppComponent implements OnInit  {
+export class FlightsComponent implements OnInit  {
   timeline: Timeline;
   options: {};
   data: any;
@@ -63,13 +63,13 @@ export class AppComponent implements OnInit  {
     this.getTimelineGroups();
     this.getOptions();
   }
-  
+  // attach events to the navigation buttons
+
 
   ngOnInit() {
     this.timeline = new Timeline(this.timelineContainer.nativeElement, this.data, this.options);
     this.timeline.setGroups(this.groups);
     this.timeline.setItems(this.data); 
-    
   }
 
   getTimelineGroups() {

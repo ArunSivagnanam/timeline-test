@@ -38,6 +38,7 @@ import { ReturnStatement } from '@angular/compiler';
   styleUrls: ['./orders.component.scss']
 })
 export class OrdersComponent implements OnInit {
+  
 
   timeline: Timeline;
   options: {};
@@ -57,6 +58,22 @@ export class OrdersComponent implements OnInit {
     this.timeline.setGroups(this.groups);
     this.timeline.setItems(this.data);
   }
+
+  zoomInFunc(){
+    this.timeline.zoomIn(1)
+  }
+
+  zoomOutFunc(){
+    this.timeline.zoomOut(1)
+  }
+  moveLeftFunc(){
+    //this.timeline.moveTo()
+  }
+  moveRightFunc(){
+    //this.timeline.moveTo(Date.now()+2)
+  }
+
+  
 
   getTimelineGroups(){
     // create groups

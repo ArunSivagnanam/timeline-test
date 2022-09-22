@@ -98,36 +98,44 @@ export class OrdersComponent implements OnInit {
   getTimelineData(){
     var colors = ['blue','darkblue']
     const colorPicker = colors[Math.floor(Math.random() * colors.length)];
-    var start = new Date("September 21,2022");
-    var end = new Date("September 23,2022");
-
     var start1 = new Date("September 21,2022");
-    var end1 = new Date("September 22,2022");
+    var end1 = new Date("September 23,2022");
+
+    var start = new Date("September 21,2022");
+    var end = new Date("September 22,2022");
+
+    var start2 = new Date("September 21,2022");
+    var end2 = new Date("September 24,2022");
 
 
     this.data = new DataSet([])
     this.data.add(
-      [
-       {
-        id:2,
+    [
+      {
+        id:0,
         start: start,
         end:end,
         group: 1,
-        content: 'actual',
-        className:'darkblue'
-        },
+        content: 'requested',
+        className:'blue'
+      },
       {
         id:1,
         start: start1,
         end:end1,
         group: 1,
-        content: 'requested',
-        className:'blue'
+        content: 'actual',
+        className:'darkblue'
+      },
+      {
+        id:2,
+        start:start2,
+        end:end2,
+        group:1,
+        content:'expected',
+        className:'striped'
       }
-    ]
-     
-    )
-    
+    ])
   }
 
   getOptions(){

@@ -105,7 +105,6 @@ export class OrdersComponent implements OnInit {
     var end1 = new Date("September 22,2022");
 
 
-
     this.data = new DataSet([])
     this.data.add(
       [
@@ -132,13 +131,15 @@ export class OrdersComponent implements OnInit {
   }
 
   getOptions(){
+    var currentTime = new Date()
+    currentTime.setDate(currentTime.getDate())
+    currentTime.setMonth(currentTime.getMonth())
     this.options = {
-      start: new Date(),
-      end: new Date(1000*60*60*24 + (new Date()).valueOf()),
+      start: new Date(currentTime.getFullYear(),currentTime.getMonth(),currentTime.getDate()-2),
+      end: new Date(currentTime.getFullYear(),currentTime.getMonth()+1),
       orientation: 'top',
       editable:true
     }
-    
   }
 
 }

@@ -114,7 +114,6 @@ export class FlightsComponent implements OnInit  {
     // create items
 
     this.data = new DataSet([]);
-    this.data.update({id:1,start:Date.now(),end:Date(),group:Math.floor(Math.random() * 10) + 1,className:"orange"}) //Create a random data so as to create the timeline and then update upon it
     var airports = ["Paris", "Madrid", "London", "Athens", "Moscow", "Milan", "Berlin", "Sofia", "Wien"] // Random airports. 
     var colors = ['red','blue','orange','purple','green']
     /* Theese are the documents already received for a subscription and saved in store.. */

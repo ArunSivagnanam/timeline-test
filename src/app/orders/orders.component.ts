@@ -69,7 +69,7 @@ export class OrdersComponent implements OnInit {
   moveLeftFunc(){
     var currentTime = new Date()
     currentTime = this.timeline.getWindow().start
-    currentTime.setDate(currentTime.getDate()-0.2)
+    currentTime.setDate(currentTime.getDate()-0.1)
     this.timeline.moveTo(currentTime)
   }
   moveRightFunc(){
@@ -133,6 +133,8 @@ export class OrdersComponent implements OnInit {
 
   getOptions(){
     this.options = {
+      start: new Date(),
+      end: new Date(1000*60*60*24 + (new Date()).valueOf()),
       orientation: 'top',
       editable:true
     }

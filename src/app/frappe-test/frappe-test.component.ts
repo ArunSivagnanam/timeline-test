@@ -56,7 +56,8 @@ export class FrappeTestComponent implements OnInit {
     this.tasks = [{
       id:"1",
       start: '2022-02-03',
-      end: '2022-02-07'
+      end: '2022-02-07',
+      class: 'pink'
     }]
     this.getTimelineData()
    }
@@ -64,7 +65,22 @@ export class FrappeTestComponent implements OnInit {
   ngOnInit(): void {
 
     this.gantt = new Gantt('#gantt',this.tasks,{
-      view_mode:"Month"
+      view_mode:"Month",
+      bar_corner_radius: 50,
+      bar_height: 50,
+      step:100,
+      padding:30,
+      custom_popup_html: function(task){
+        return `
+          <div class="gantt-container">
+            <p>Flight: ${task.id} <img src="../assets/img/airplane.jpg" style="width="30px"; height="30px"></p>
+            <p>Expected to reach destination: ${task.end}</p>
+            <p>Destination is: ${task.destination}</p>
+          </div>
+          
+        
+        `
+      }
     })
         
   }
@@ -85,6 +101,8 @@ export class FrappeTestComponent implements OnInit {
   
 
   getTimelineData() {
+    var airports = ["Paris", "Madrid", "London", "Athens", "Moscow", "Milan", "Berlin", "Sofia", "Wien"] // Random airports. 
+    var colors = ['blue','purple','pink']
   /* Theese are the documents already received for a subscription and saved in store.. */
   const store = {
     // subsciption_id
@@ -105,7 +123,9 @@ export class FrappeTestComponent implements OnInit {
       const newDocuments$ = interval(2000).pipe( //Interval defines every how many miliseconds data are generated.
         map((e) =>  {
 
+          const colorPicker = colors[Math.floor(Math.random() * colors.length)];
           var id = Math.floor(Math.random() * 10); //defines how many items will be inserted in the timeline (e.g. 10)
+          const airport = airports[Math.floor(Math.random() * airports.length)];
           var date1 = new Date();
           date1.setFullYear(2022);
           date1.setMonth(date1.getMonth()+6*Math.random())
@@ -121,7 +141,14 @@ export class FrappeTestComponent implements OnInit {
           var end = date2.getFullYear()+'-'+date2.getMonth()+'-'+date2.getDate()
           
         
-          return { id:id, start:start, end:end, name:"flight",dependencies:'',progress: Math.floor(Math.random() * 100)}
+          return { id:id, 
+            start:start, 
+            end:end, 
+            name:"flight "+id + " departs for "+airport,
+            destination:airport,
+            dependencies:'',
+            custom_class: colorPicker
+          }
 
         })
       );

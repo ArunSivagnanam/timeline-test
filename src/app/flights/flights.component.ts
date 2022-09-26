@@ -43,7 +43,7 @@ export interface AggregatedDocuments {
 @Component({
   selector: 'my-app',
   templateUrl: './flights.component.html',
-  styleUrls: [ './flights.component.scss' ],
+  styleUrls: [ '../app.component.scss' ],
 })
 
 
@@ -152,7 +152,7 @@ export class FlightsComponent implements OnInit  {
 
 
             return {className:colorPicker, id:id, start:start, end:end,group: Math.floor(Math.random() * 10) + 1,content:'flight ' + id + 
-            '<img src="../assets/img/airplane.jpg" style="width="30px"; height="30px"> Departs for ' + airport + '<table border="1"><tr><td>Label1</td><td>Label2</td></tr></table>'}
+            '<img src="../assets/img/airplane.jpg" style="width="30px"; height="30px"> Departs for ' + airport}
 
           })
         );
@@ -226,10 +226,7 @@ export class FlightsComponent implements OnInit  {
       start: new Date(),
       end: new Date(1000*60*60*24 + (new Date()).valueOf()),
       editable: true, 
-      margin: {
-        item: 10, // minimal margin between items
-        axis: 5   // minimal margin between items and the axis
-      },
+    
       orientation: 'top'
     };
   }

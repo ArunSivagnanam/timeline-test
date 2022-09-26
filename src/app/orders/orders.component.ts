@@ -35,7 +35,7 @@ import { ReturnStatement } from '@angular/compiler';
 @Component({
   selector: 'my-app',
   templateUrl: './orders.component.html',
-  styleUrls: ['./orders.component.scss']
+  styleUrls: ['../app.component.scss']
 })
 export class OrdersComponent implements OnInit {
   

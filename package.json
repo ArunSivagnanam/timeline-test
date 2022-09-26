@@ -19,6 +19,9 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "@kometbomb/binarysearch": "^1.0.1",
+    "bootstrap": "^5.2.1",
+    "frappe-gantt": "^0.6.1",
+    "resolve-url-loader": "^5.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "vis-timeline": "^7.7.0",
@@ -30,12 +33,21 @@
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
     "binary-sorted-array": "^1.0.4",
+    "css-loader": "^6.7.1",
     "jasmine-core": "~4.1.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.7.2"
+    "mini-css-extract-plugin": "^2.6.1",
+    "node-sass": "^7.0.3",
+    "sass": "^1.55.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "stylus": "^0.59.0",
+    "stylus-loader": "^7.0.0",
+    "typescript": "~4.7.2",
+    "webpack": "^5.74.0"
   }
 }

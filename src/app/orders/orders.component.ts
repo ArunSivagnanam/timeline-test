@@ -84,7 +84,7 @@ export class OrdersComponent implements OnInit {
   getTimelineGroups(){
     // create groups
     this.groups = new DataSet([
-      {id: 1, content: 'Packaging'},
+      {id: 1, content: 'Packaging',subgroupStack:{sg:true,sg1:false}},
       {id: 2, content: 'QA Release'},
       {id: 3, content: 'In Transist to shipping point'},
       {id: 4, content: 'Available on stock'},
@@ -117,7 +117,8 @@ export class OrdersComponent implements OnInit {
         end:end,
         group: 1,
         content: 'requested',
-        className:'blue'
+        className:'blue',
+        subgroup:'sg1'
       },
       {
         id:1,
@@ -125,7 +126,8 @@ export class OrdersComponent implements OnInit {
         end:end1,
         group: 1,
         content: 'actual',
-        className:'darkblue'
+        className:'darkblue',
+        subgroup:'sg'
       },
       {
         id:2,
@@ -133,7 +135,8 @@ export class OrdersComponent implements OnInit {
         end:end2,
         group:1,
         content:'expected',
-        className:'striped'
+        className:'striped',
+        subgroup:'sg'
       }
     ])
   }

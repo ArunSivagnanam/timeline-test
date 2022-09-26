@@ -56,6 +56,67 @@ $handle-color: #ddd !default;
 	.bar-progress {
 		fill: $blue;
 	}
+
+
+	/** bar and bar progress of the different color */
+/* initial state */
+	.bar-wrapper.blue .bar {
+	fill: hsl(240, 50%, 57%);
+  }
+  .bar-wrapper.blue .bar-progress {
+	fill: hsl(240, 100%, 77%);
+  }
+  .bar-wrapper.pink .bar {
+	fill: hsl(347, 50%, 57%);
+  }
+  .bar-wrapper.pink .bar-progress {
+	fill: hsl(347, 100%, 77%);
+  }
+  .bar-wrapper.purple .bar {
+	fill: hsl(298, 50%, 57%);
+  }
+  .bar-wrapper.purple .bar-progress {
+	fill: hsl(298, 100%, 77%);
+  }
+  
+  /* hover state */
+  .bar-wrapper.blue:hover .bar-progress {
+	fill: hsl(240, 100%, 77%);
+  }
+  .bar-wrapper.pink:hover .bar-progress {
+	fill: hsl(347, 100%, 77%);
+  }
+  .bar-wrapper.purple:hover .bar-progress {
+	fill: hsl(298, 100%, 77%);
+  }
+  
+  /* active state */
+  .bar-wrapper.blue.active .bar {
+	fill: hsl(240, 50%, 57%);
+  }
+  .bar-wrapper.blue.active .bar-progress {
+	fill: hsl(240, 100%, 77%);
+  }
+  .bar-wrapper.pink.active .bar {
+	fill: hsl(347, 50%, 57%);
+  }
+	.bar-wrapper.pink.active .bar-progress {
+	fill: hsl(347, 100%, 77%);
+  }
+ 	.bar-wrapper.purple.active .bar {
+	fill: hsl(298, 50%, 57%);
+  }
+	.bar-wrapper.purple.active .bar-progress {
+	fill: hsl(298, 100%, 77%);
+  }
+
+
+
+
+
+
+
+
 	.bar-invalid {
 		fill: transparent;
 		stroke: $bar-stroke;
@@ -137,15 +198,19 @@ $handle-color: #ddd !default;
 	position: relative;
 	overflow: auto;
 	font-size: 12px;
+	background-color: #fff;
+	color: #434141;
+	border: 2px solid #ddd;
+	border-radius: 5px;
 
 	.popup-wrapper {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: rgba(0, 0, 0, 0.8);
-		padding: 0;
-		color: #959da5;
-		border-radius: 3px;
+		background-color: #fff(214, 52, 52, 0.8);
+		padding: 10px;
+		color: #5a7086;
+		border-radius: 5px;
 
 		.title {
 			border-bottom: 3px solid $blue;

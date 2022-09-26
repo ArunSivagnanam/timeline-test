@@ -17,7 +17,7 @@ $handle-color: #ddd !default;
 	.grid-header {
 		fill: #ffffff;
 		stroke: $border-color;
-		stroke-width: 1.4;
+		stroke-width: 7;
 	}
 	.grid-row {
 		fill: #ffffff;
@@ -30,9 +30,9 @@ $handle-color: #ddd !default;
 	}
 	.tick {
 		stroke: $border-color;
-		stroke-width: 0.2;
+		stroke-width: 3;
 		&.thick {
-			stroke-width: 0.4;
+			stroke-width: 3;
 		}
 	}
 	.today-highlight {
@@ -109,12 +109,6 @@ $handle-color: #ddd !default;
 	.bar-wrapper.purple.active .bar-progress {
 	fill: hsl(298, 100%, 77%);
   }
-
-
-
-
-
-
 
 
 	.bar-invalid {

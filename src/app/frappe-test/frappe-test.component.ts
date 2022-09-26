@@ -69,25 +69,20 @@ export class FrappeTestComponent implements OnInit {
         
   }
 
-  zoomInFunc(){
+  zoomDayFunc(){
+    this.gantt.change_view_mode("Day")
+  }
+  zoomWeekFunc(){
     this.gantt.change_view_mode("Week")
   }
-
-  zoomOutFunc(){
+  zoomMonthFunc(){
     this.gantt.change_view_mode("Month")
   }
-  moveLeftFunc(){
-    var currentTime = new Date()
-    currentTime = this.gantt.getWindow().start
-    currentTime.setDate(currentTime.getDate()-0.2)
-    this.gantt.moveTo(currentTime)
+
+  zoomYearFunc(){
+    this.gantt.change_view_mode("Year")
   }
-  moveRightFunc(){
-    var currentTime = new Date()
-    currentTime = this.gantt.getWindow().end
-    currentTime.setDate(currentTime.getDate()+0.2)
-    this.gantt.moveTo(currentTime)
-  }
+  
 
   getTimelineData() {
   /* Theese are the documents already received for a subscription and saved in store.. */

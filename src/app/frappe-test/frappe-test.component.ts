@@ -85,6 +85,9 @@ export class FrappeTestComponent implements OnInit {
         
   }
 
+  zoomQuarterDayFunc(){
+    this.gantt.change_view_mode("Quarter Day")
+  }
   zoomDayFunc(){
     this.gantt.change_view_mode("Day")
   }

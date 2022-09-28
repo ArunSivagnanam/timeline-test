@@ -63,7 +63,7 @@ export class FlightsComponent implements OnInit  {
     this.getTimelineGroups();
     this.getOptions();
   }
-  // attach events to the navigation buttons
+  
 
 
   ngOnInit() {
@@ -71,7 +71,7 @@ export class FlightsComponent implements OnInit  {
     this.timeline.setGroups(this.groups);
     this.timeline.setItems(this.data); 
   }
-
+  // attach events to the navigation buttons
   zoomInFunc(){
     this.timeline.zoomIn(1)
   }
@@ -188,7 +188,7 @@ export class FlightsComponent implements OnInit  {
         aggregatedDocuments.sortedDocuments.insert(newIncomingDocument);
         aggregatedDocuments.uniqueDocuments[newDocument.id] = newIncomingDocument;
 
-        //console.log(aggregatedDocuments.uniqueDocuments)
+        
 
         return aggregatedDocuments;
       }, aggregatedDocuments),
@@ -211,11 +211,7 @@ export class FlightsComponent implements OnInit  {
     const documentToTableTransformed$ = documentToTableTransformer(5, comparator);
 
     documentToTableTransformed$.subscribe((data:AggregatedDocuments) => { 
-      
-        //let destination = airports[Math.floor(Math.random() * airports.length)];
-        this.data.update(data.sortedDocuments.getArray())
-        //console.log(this.data.get())
-        
+        this.data.update(data.sortedDocuments.getArray()) 
     });
          
   }

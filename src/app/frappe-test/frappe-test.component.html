@@ -1,9 +1,67 @@
+<style>
+   #div1{
+      float:right;
+      width: 96.5%;
+   }
+   #div2{
+   }
+   td {
+  border: solid black 1px;
+  height: 80px;
+
+}
+</style>
+
 <h1>CPH flight departures</h1>
 <div>
-   <button (click)="zoomQuarterDayFunc()" >Zoom Quarter-Day</button>
-   <button (click)="zoomDayFunc()" >Zoom Day</button>
-   <button (click)="zoomWeekFunc()" >Zoom Week</button>
-   <button (click)="zoomMonthFunc()" >Zoom Month</button>
-   <button (click)="zoomYearFunc()" >Zoom Year</button>
-   <svg id="gantt"></svg> 
+   <div id="div1">
+      
+      <button (click)="zoomQuarterDayFunc()" >Zoom Quarter-Day</button>
+      <button (click)="zoomDayFunc()" >Zoom Day</button>
+      <button (click)="zoomWeekFunc()" >Zoom Week</button>
+      <button (click)="zoomMonthFunc()" >Zoom Month</button>
+      <button (click)="zoomYearFunc()" >Zoom Year</button>
+     
+      <svg id="gantt"></svg> 
+   </div>
+   <div id="div2">
+      <table>
+         <tr>
+           <td>Calendar</td>
+         </tr>
+         <tr>
+           <td>Airline 1</td>
+         </tr>
+         <tr>
+            <td>Airline 2</td>
+          </tr>
+          <tr>
+            <td>Airline 3</td>
+          </tr>
+          <tr>
+            <td>Airline 4</td>
+          </tr>
+          <tr>
+            <td>Airline 5</td>
+          </tr>
+          <tr>
+            <td>Airline 6</td>
+          </tr>
+          <tr>
+            <td>Airline 7</td>
+          </tr>
+          <tr>
+            <td>Airline 8</td>
+          </tr>
+          <tr>
+            <td>Airline 9</td>
+          </tr>
+          <tr>
+            <td>Airline 10</td>
+          </tr>
+
+       </table>
+   </div>
+   
 </div>
+

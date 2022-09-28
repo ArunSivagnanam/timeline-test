@@ -125,25 +125,22 @@ export class FrappeTestComponent implements OnInit {
 /* Theese are random incomming documents. The script can be optimized to create better random dates**/
       const newDocuments$ = interval(2000).pipe( //Interval defines every how many miliseconds data are generated.
         map((e) =>  {
-
           const colorPicker = colors[Math.floor(Math.random() * colors.length)];
           var id = Math.floor(Math.random() * 10); //defines how many items will be inserted in the timeline (e.g. 10)
           const airport = airports[Math.floor(Math.random() * airports.length)];
+
           var date1 = new Date();
           date1.setFullYear(2022);
           date1.setMonth(date1.getMonth()+6*Math.random())
           date1.setDate(date1.getDate()+2*Math.random())
           var start = date1.getFullYear()+'-'+date1.getMonth()+'-'+date1.getDate()
 
-
           var date2 = new Date();
           date2.setFullYear(2022);
           date2.setMonth(date2.getMonth()+10*Math.random())
           date2.setDate(date2.getDate()+10*Math.random())
-         
           var end = date2.getFullYear()+'-'+date2.getMonth()+'-'+date2.getDate()
           
-        
           return { id:id, 
             start:start, 
             end:end, 
@@ -208,11 +205,8 @@ export class FrappeTestComponent implements OnInit {
   const documentToTableTransformed$ = documentToTableTransformer(5, comparator);
 
   documentToTableTransformed$.subscribe((data:AggregatedDocuments) => { 
-    
-      //let destination = airports[Math.floor(Math.random() * airports.length)];
       this.tasks = data.sortedDocuments.getArray()  
       this.gantt.refresh(this.tasks)
-     
   });
 }
 

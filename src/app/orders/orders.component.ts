@@ -98,14 +98,23 @@ export class OrdersComponent implements OnInit {
   getTimelineData(){
     var colors = ['blue','darkblue']
     const colorPicker = colors[Math.floor(Math.random() * colors.length)];
-    var start1 = new Date("September 21,2022");
-    var end1 = new Date("September 23,2022");
+    
 
-    var start = new Date("September 21,2022");
-    var end = new Date("September 22,2022");
+    var start = new Date();
+    start.setDate(start.getDate())
+    var end = new Date();
+    end.setDate(start.getDate()+1)
+    console.log(end)
 
-    var start2 = new Date("September 21,2022");
-    var end2 = new Date("September 24,2022");
+    var start1 = new Date();
+    start1.setDate(start1.getDate())
+    var end1 = new Date();
+    end1.setDate(start1.getDate()+3)
+
+    var start2 = new Date();
+    start2.setDate(start2.getDate())
+    var end2 = new Date();
+    end2.setDate(start2.getDate()+2)
 
 
     this.data = new DataSet([])
@@ -149,7 +158,8 @@ export class OrdersComponent implements OnInit {
       start: new Date(currentTime.getFullYear(),currentTime.getMonth(),currentTime.getDate()-2),
       end: new Date(currentTime.getFullYear(),currentTime.getMonth()+1),
       orientation: 'top',
-      editable:true
+      editable:true,
+      align:'center'
     }
   }
 
